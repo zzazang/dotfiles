@@ -1,0 +1,9 @@
+[user]
+	email = chcha@itxsecurity.com
+	name = chcha
+[color]
+	ui = auto
+[core]
+	editor = vim
+[push]
+	default = matching

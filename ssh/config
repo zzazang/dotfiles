@@ -1,0 +1,5 @@
+Host gerrit
+  Hostname localhost
+  Port 29418
+  User chcha
+
