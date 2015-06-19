@@ -1,19 +1,20 @@
 - clean: ['~']
 
 - link:
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
-    ~/.ssh/config:
-        path: ssh/config
-        create: true
     ~/.tmux.conf: tmux.conf
-    ~/.zshenv: zshenv
-    ~/.zshrc: zshrc
     ~/bin:
         path: bin/
         create: true
-    ~/.xinitrc: xinitrc
+    ~/.zprezto: zsh/zprezto
+    ~/.zshrc: zsh/zshrc
+    ~/.zlogin: zsh/zlogin
+    ~/.zlogout: zsh/zlogout
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.zprofile: zsh/zprofile
+    ~/.zshenv: zsh/zshenv
 
+- shell:
+      - ["APP_PATH=$(pwd)/spf13-vim curl https://j.mp/spf13-vim3 -L -o - | sh", "Installing spf13-vim"]
+      - ["git submodule update --init --recursive", "Installing submodules"]
 
