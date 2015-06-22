@@ -17,6 +17,6 @@
 - shell:
     - ["git submodule update --init --recursive", "Installing submodules"]
     - ["mkdir -p spf13-vim/.vim 2> /dev/null", "Making spf13-vim"]
-    - [sed -i "s/BundleInstall!/BundleInstall/g" spf13-vim/bootstrap.sh]
+    - [sed -i -e 's/BundleInstall!/BundleInstall/g' spf13-vim/bootstrap.sh 2> /dev/null]
     - ["cd spf13-vim && ./bootstrap.sh", "Install(Update)ing spf13-vim"]
 
