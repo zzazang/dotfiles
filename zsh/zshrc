@@ -11,8 +11,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-if [ ! -z $(which mvim) ];
+if [ -x "`which mvim`"  ];
 then
-    alias vim='mvim -v'
+  alias vim="mvim -v"
 fi
 
