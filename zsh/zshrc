@@ -27,9 +27,15 @@ function ssht() {
 
     if [ "$2" != "" ];
     then
-      TMUX_COMMAND="tmux new -A -s $2"
+      TMUX_COMMAND=". /etc/profile; . ~/zprofile; tmux new -A -s $2"
     fi
 
+    echo "ssh $1 -t $TMUX_COMMAND"
     ssh $1 -t $TMUX_COMMAND
+}
+
+function lazygit() {
+  git commit -a -m "$1"
+  git push
 }
 
