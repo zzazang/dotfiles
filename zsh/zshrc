@@ -11,8 +11,25 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias vi="vim"
+
 if [ -x "`which mvim`"  ];
 then
   alias vim="mvim -v"
 fi
+
+function ssht() {
+    if [ "$1" = "" ];
+    then
+      echo "Usage: $0 [host] [tmux-session]"
+      return
+    fi
+
+    if [ "$2" != "" ];
+    then
+      TMUX_COMMAND="tmux new -A -s $2"
+    fi
+
+    ssh $1 -t $TMUX_COMMAND
+}
 
