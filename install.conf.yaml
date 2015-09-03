@@ -7,6 +7,7 @@
         path: bin/
         create: true
     ~/.vimrc.local: vimrc-spf13.local
+    ~/.vimrc.before.local: vimrc.before.local
     ~/.zprezto: zprezto
     ~/.zshrc: zsh/zshrc
     ~/.zlogin: zsh/zlogin

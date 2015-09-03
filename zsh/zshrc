@@ -27,7 +27,7 @@ function ssht() {
 
     if [ "$2" != "" ];
     then
-      TMUX_COMMAND=". /etc/profile; . ~/zprofile; tmux new -A -s $2"
+      TMUX_COMMAND=". /etc/profile; ; ~/.profile ; . ~/.zprofile; tmux new -A -s $2"
     fi
 
     echo "ssh $1 -t $TMUX_COMMAND"
@@ -39,3 +39,10 @@ function lazygit() {
   git push
 }
 
+alias hibernate='sudo pmset -a hibernatemode 25'
+alias sleep='sudo pmset -a hibernatemode 0'
+alias safesleep='sudo pmset -a hibernatemode 3'
+alias smartsleep='sudo pmset -a hibernatemode 2'
+
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
