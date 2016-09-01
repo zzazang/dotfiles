@@ -8,3 +8,6 @@
 	path = spf13-vim
 	url = https://github.com/spf13/spf13-vim.git
 	branch = 3.0
+[submodule "vimdot"]
+	path = vimdot
+	url = ./vimdot
