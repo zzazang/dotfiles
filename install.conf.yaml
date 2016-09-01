@@ -14,5 +14,5 @@
 
 - shell:
     - ["git submodule update --init --recursive", "Installing submodules"]
-    - ["cd vimdot && ./install.sh", "Installing vimrc"]
+    - ["echo ''", "Run 'cd vimdot && ./install.sh to install vim plugins."]
 
