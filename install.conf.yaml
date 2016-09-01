@@ -6,13 +6,8 @@
     ~/bin:
         path: bin/
         create: true
-    ~/.zprezto: zprezto
-    ~/.zshrc: zsh/zshrc
-    ~/.zlogin: zsh/zlogin
-    ~/.zlogout: zsh/zlogout
-    ~/.zpreztorc: zsh/zpreztorc
-    ~/.zprofile: zsh/zprofile
-    ~/.zshenv: zsh/zshenv
+    ~/.zgen: zgen
+    ~/.zshrc: zgen-zshrc
     ~/.ctags: ctags/ctags
     ~/.vim: vimdot
     ~/.vimrc: vimdot/vimrc

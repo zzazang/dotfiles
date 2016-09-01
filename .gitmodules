@@ -1,13 +1,17 @@
 [submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
+  path = dotbot
+  url = https://github.com/anishathalye/dotbot
 [submodule "zprezto"]
-	path = zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
+  path = zprezto
+  url = https://github.com/sorin-ionescu/prezto.git
 [submodule "spf13-vim"]
-	path = spf13-vim
-	url = https://github.com/spf13/spf13-vim.git
-	branch = 3.0
+  path = spf13-vim
+  url = https://github.com/spf13/spf13-vim.git
+  branch = 3.0
 [submodule "vimdot"]
-	path = vimdot
-	url = ./vimdot
+  path = vimdot
+  url = https://github.com/zzazang/vimdot.git
+[submodule "zgen"]
+	path = zgen
+	url = https://github.com/tarjoilija/zgen
+
