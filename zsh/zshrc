@@ -44,5 +44,27 @@ alias sleep='sudo pmset -a hibernatemode 0'
 alias safesleep='sudo pmset -a hibernatemode 3'
 alias smartsleep='sudo pmset -a hibernatemode 2'
 
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export HOMEBREW_GITHUB_API_TOKEN=b0647cdbe32b48fc233b4fc9b8e4cca3ee398806
+
+## pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# for completion
+source /usr/local/Cellar/pyenv/20160202/completions/pyenv.zsh
+
+## pyenv-virtualenv
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+## autoenv
+source /usr/local/opt/autoenv/activate.sh
+
+
+
+###-tns-completion-start-###
+if [ -f /Users/chcha/.tnsrc ]; then 
+    source /Users/chcha/.tnsrc 
+fi
+###-tns-completion-end-###
+eval "$(rbenv init -)"

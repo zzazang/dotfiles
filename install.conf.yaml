@@ -6,8 +6,6 @@
     ~/bin:
         path: bin/
         create: true
-    ~/.vimrc.local: vimrc-spf13.local
-    ~/.vimrc.before.local: vimrc.before.local
     ~/.zprezto: zprezto
     ~/.zshrc: zsh/zshrc
     ~/.zlogin: zsh/zlogin
@@ -15,10 +13,11 @@
     ~/.zpreztorc: zsh/zpreztorc
     ~/.zprofile: zsh/zprofile
     ~/.zshenv: zsh/zshenv
+    ~/.ctags: ctags/ctags
+    ~/.vim: vimdot
+    ~/.vimrc: vimdot/vimrc
 
 - shell:
     - ["git submodule update --init --recursive", "Installing submodules"]
-    - ["mkdir -p spf13-vim/.vim 2> /dev/null", "Making spf13-vim"]
-    - [sed -i -e 's/BundleInstall!/BundleInstall/g' spf13-vim/bootstrap.sh 2> /dev/null]
-    - ["cd spf13-vim && APP_PATH=$(pwd) ./bootstrap.sh", "Install(Update)ing spf13-vim"]
+    - ["cd vimdot && ./install.sh", "Installing vimrc"]
 
