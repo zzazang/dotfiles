@@ -25,6 +25,9 @@ if ! zgen saved; then
   zgen save
 fi
 
+BULLETTRAIN_CONTEXT_SHOW=true
+BULLETTRAIN_IS_SSH_CLIENT=true
+
 BULLETTRAIN_PROMPT_ORDER=(
   time
   dir
