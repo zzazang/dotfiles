@@ -38,3 +38,7 @@ BULLETTRAIN_PROMPT_ORDER=(
 # show fortune cookie
 type fortune &>/dev/null && fortune -a
 
+
+# added by travis gem
+[ -f /Users/chcha/.travis/travis.sh ] && source /Users/chcha/.travis/travis.sh
+
