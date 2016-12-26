@@ -1,3 +1,12 @@
+SHELL=/bin/sh
+MAILDIR=$HOME/Mail  # Youd better make sure it exists
+SPOOL=$HOME/Mail/mbox
+DEFAULT=$MAILDIR/mbox
+ORGMAIL=$MAILDIR/mbox
+LOGFILE=$MAILDIR/log
+VERBOSE=yes
+LOGABSTRACT=all
+
 :0
 * .*
 {
