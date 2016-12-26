@@ -14,6 +14,7 @@
     ~/.ctags: ctags/ctags
     ~/.vim: vimdot
     ~/.vimrc: vimdot/vimrc
+    ~/.fetchmailrc: fetchmailrc
 
 - shell:
     - ["cd vimdot && ./install.sh", "Installing vimrc"]
