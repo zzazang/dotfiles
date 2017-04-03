@@ -12,16 +12,22 @@ load_utilities() {
 
 my_zsh_zplug() {
   # Check if zplug is installed
+  export ZPLUG_HOME=~/.zplug
+
   if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-    source ~/.zplug/init.zsh && zplug update --self
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+    source ~/.zplug/init.zsh && zplug update
   fi
 
   source ~/.zplug/init.zsh
-  zplug "mollifier/anyframe"
+  # zplug "mollifier/anyframe"
   # zplug "b4b4r07/enhancd", use:init.sh
   # Vanilla shell
-  zplug "yous/vanilli.sh"
+  # zplug "yous/vanilli.sh"
+  # Load if "if" tag returns true
+  zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+
+
   # Additional completion definitions for Zsh
   zplug "zsh-users/zsh-completions"
   zplug "felixr/docker-zsh-completion"
@@ -30,11 +36,13 @@ my_zsh_zplug() {
   # excuting compinit command and sourcing other plugins.
   zplug "zsh-users/zsh-syntax-highlighting"
   # ZSH port of Fish shell's history search feature
-  zplug "zsh-users/zsh-history-substring-search"
+  #zplug "zsh-users/zsh-history-substring-search"
 
   # Load the theme.
-  zplug "yous/lime"
-  zplug 'dracula/zsh', as:theme
+  zplug "yous/lime", as:theme
+  #zplug 'dracula/zsh', as:theme
+
+  export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
 
   # fix garish, unreadable green and yellow node segment colours
   POWERLEVEL9K_NODE_VERSION_BACKGROUND="red"
@@ -46,8 +54,9 @@ my_zsh_zplug() {
   POWERLEVEL9K_SHORTEN_DELIMITER=""
   POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-  export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
   zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+  zplug "thewtex/tmux-mem-cpu-load"
 
   # Install plugins if there are plugins that have not been installed
   if ! zplug check --verbose; then
@@ -101,4 +110,3 @@ type fortune &>/dev/null && fortune -a
 [ -f /Users/chcha/.travis/travis.sh ] && source /Users/chcha/.travis/travis.sh
 
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
