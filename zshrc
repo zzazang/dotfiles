@@ -94,6 +94,9 @@ my_zsh_zplug
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+#complete
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # show fortune cookie
 type fortune &>/dev/null && fortune -a
 
