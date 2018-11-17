@@ -2,9 +2,7 @@
 
 brew cask install android-studio
 brew cask install atom
-brew cask install eclipse-jee
+brew cask install visual-studio-code
 brew cask install google-chrome
-brew cask install java
-brew cask install virtualbox
-brew cask install virtualbox-extension-pack
+brew cask install jetbrains-toolbox
 

@@ -9,12 +9,10 @@
     ~/bin:
         path: bin/
         create: true
-    ~/.zgen: zgen
-    ~/.zshrc: zgen-zshrc
+    ~/.zshrc: zshrc
     ~/.ctags: ctags/ctags
     ~/.vim: vimdot
     ~/.vimrc: vimdot/vimrc
-    ~/.fetchmailrc: fetchmailrc
 
 - shell:
     - ["cd vimdot && ./install.sh", "Installing vimrc"]
