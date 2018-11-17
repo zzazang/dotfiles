@@ -12,9 +12,11 @@ load_utilities() {
 
 my_zsh_zplug() {
   # Check if zplug is installed
+  export ZPLUG_HOME=~/.zplug
+
   if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-    source ~/.zplug/init.zsh && zplug update --self
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+    source ~/.zplug/init.zsh && zplug update
   fi
 
   source ~/.zplug/init.zsh
@@ -36,9 +38,7 @@ my_zsh_zplug() {
   POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
   POWERLEVEL9K_MODE='nerdfont-complete'
 
-  export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
   zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
-
 
   ##### plugins
   zplug "modules/tmux",       from:prezto
@@ -51,6 +51,7 @@ my_zsh_zplug() {
   zplug "modules/completion", from:prezto
 
   zplug "supercrabtree/k"
+  zplug "thewtex/tmux-mem-cpu-load"
 
   # Additional completion definitions for Zsh
   zplug "zsh-users/zsh-completions",              defer:2
@@ -137,4 +138,3 @@ type fortune &>/dev/null && fortune -a
 [ -f /Users/chcha/.travis/travis.sh ] && source /Users/chcha/.travis/travis.sh
 
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
