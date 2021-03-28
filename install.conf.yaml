@@ -9,8 +9,8 @@
     ~/bin:
         path: bin/
         create: true
+    ~/.zsh: zsh
     ~/.zshrc: zshrc
-    ~/.ctags: ctags/ctags
     ~/.vim: vimdot
     ~/.vimrc: vimdot/vimrc
 
