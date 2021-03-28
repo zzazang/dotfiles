@@ -11,6 +11,7 @@
         create: true
     ~/.zsh: zsh
     ~/.zshrc: zshrc
+    ~/.zgen: zgen
     ~/.vim: vimdot
     ~/.vimrc: vimdot/vimrc
 

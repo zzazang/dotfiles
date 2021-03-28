@@ -83,6 +83,33 @@ my_zsh_antibody() {
   source ~/.zsh_plugins.sh
 }
 
+
+my_zsh_plugin_zgen() {
+  # load zgen
+  source "${HOME}/.zgen/zgen.zsh"
+
+  # if the init script doesn't exist
+  if ! zgen saved; then
+    # specify plugins here
+    zgen oh-my-zsh
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh themes/arrow
+    zgen oh-my-zsh compleat
+    zgen load romkatv/powerlevel10k powerlevel10k
+
+    # completions
+    zgen load zsh-users/zsh-completions src
+
+    # theme
+    zgen oh-my-zsh themes/arrow
+
+    # generate the init script from plugins above
+    zgen save
+  fi
+}
+
 my_zsh_zplug() {
   # Check if zplug is installed
   export ZPLUG_HOME=~/.zplug
@@ -184,9 +211,10 @@ type fortune &>/dev/null && fortune|cowsay -f tux -n|lolcat
 
 ## PLUGINS
 my_zsh_plugin_config
-my_zsh_antibody
+#my_zsh_antibody
 #my_zsh_zplug
 #my_zsh_zplugin
+my_zsh_plugin_zgen
 #source ~/.zsh_plugins.sh
 
 ## ZSH CONFIG

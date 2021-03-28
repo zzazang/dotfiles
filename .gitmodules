@@ -8,6 +8,6 @@
   path = vimdot
   url = https://github.com/zzazang/vimdot.git
 [submodule "zgen"]
-  path = zgen
-  url = https://github.com/tarjoilija/zgen
+	path = zgen
+	url = https://github.com/tarjoilija/zgen.git
 
